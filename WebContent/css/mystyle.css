@@ -1,0 +1,221 @@
+body {
+	margin-top: 60px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: black;
+	background-image: url("../pic/convention.jpg");
+	min-height: 400px; margin-bottom : 100px; clear : both;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-attachment: fixed;
+	margin-bottom: 100px;
+	clear: both;
+}
+
+.form {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p {
+	display: table-row;
+}
+
+label {
+	color: white;
+	font-weight: bold;
+	font-size: 17px;
+	text-shadow: 2px 2px black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: #FFFFFF;
+	width: 768px;
+	word-wrap:break-word;
+}
+
+.bad {
+	visibility: hidden;
+	color: red;
+}
+
+.pic {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	width: 15em;
+	height: 10em;
+}
+
+.cell {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+textarea {
+	opacity: 0.7;
+	filter: alpha(opacity = 70); /* For IE8 and earlier */
+	font-size: 1em;
+}
+
+.small-button {
+	font-size: 15px;
+	width: 6em;
+	height: 2em;
+}
+
+.big-button {
+	font-size: 15px;
+	width: 9em;
+	height: 2em;
+}
+.bigger-button {
+	font-size: 15px;
+	width: 12em;
+	height: 2em;
+}
+
+.left-margin {
+	margin-left: 6em;
+}
+
+.file-input {
+	font-size: 15px;
+	width: 14em;
+	height: 2em;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 60px;
+}
+
+.footer {
+	position: absolute; bottom : 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	line-height: 60px; /* Vertically center the text there */
+	background-color: #f5f5f5;
+	bottom: 0;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+body>.container {
+	padding: 60px 60px 0;
+}
+
+.footer>.container {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+code {
+	font-size: 80%;
+}
+
+table tr {
+	color: #337ab7;
+	cursor: pointer;
+	padding: 3px;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+	background-color: #282828;
+	color: #337ab7;
+}
+
+.table-header {
+	background-color: #000080;
+	color: #FFFFFF;
+	cursor: default;
+}
+table
+{
+	empty-cells:show;
+	table-layout:fixed; 
+	width:768px;
+}
+table td
+{
+	width:100px; 
+	word-wrap:break-word;
+	padding: 3px;
+}
+.float-right
+{
+	float:right;
+}
+.message
+{
+	vertical-align: top;
+	height: 62px;
+	white-space:pre;
+}
+#myInput {
+    background-image: url("../pic/searchicon.png"); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+.white
+{
+	padding: 0px 10px 0px 0px;
+	color:white;
+}
+.margin
+{
+	margin: 40px;
+}
+.black
+{
+	background-color:black;
+}
+
+.align-right
+{
+	align: right;
+}
+.button 
+{
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+.cursor-default
+{
+	cursor: default;
+}
+.delete-user {
+	font-size: 15px;
+	width: 7em;
+	height: 2em;
+}
+.little-left-margin {
+	margin-left: 2em;
+}

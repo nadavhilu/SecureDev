@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>MVCDemo</display-name>
+
+	<listener>
+		<listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>ShiroFilter</filter-name>
+		<filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>ShiroFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
+
+	<welcome-file-list>
+		<welcome-file>homeController</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<description></description>
+		<display-name>LoginController</display-name>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>controllers.LoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/LoginController</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Admin Panel</display-name>
+		<servlet-name>AdminPanel</servlet-name>
+		<servlet-class>controllers.AdminPanelController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminPanel</servlet-name>
+		<url-pattern>/AdminPanel</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description />
+		<display-name>DeleationController</display-name>
+		<servlet-name>DeleationController</servlet-name>
+		<servlet-class>controllers.DeleationController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleationController</servlet-name>
+		<url-pattern>/DeleationController</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>homeController</display-name>
+		<servlet-name>homeController</servlet-name>
+		<servlet-class>controllers.homeController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>homeController</servlet-name>
+		<url-pattern>/homeController</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>LogoutController</display-name>
+		<servlet-name>LogoutController</servlet-name>
+		<servlet-class>controllers.LogoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutController</servlet-name>
+		<url-pattern>/LogoutController</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>eventHandling</display-name>
+		<servlet-name>eventController</servlet-name>
+		<servlet-class>controllers.EventController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>eventController</servlet-name>
+		<url-pattern>/eventHandling</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>eventList</display-name>
+		<servlet-name>eventList</servlet-name>
+		<servlet-class>controllers.EventController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>eventList</servlet-name>
+		<url-pattern>/eventList</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>addNews</display-name>
+		<servlet-name>addNews</servlet-name>
+		<servlet-class>controllers.NewsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addNews</servlet-name>
+		<url-pattern>/addNews</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ViewNews</display-name>
+		<servlet-name>ViewNews</servlet-name>
+		<servlet-class>controllers.NewsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewNews</servlet-name>
+		<url-pattern>/News</url-pattern>
+	</servlet-mapping>
+
+
+	<filter>
+		<filter-name>NoCacheFilter</filter-name>
+		<filter-class>controllers.NoCacheFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>NoCacheFilter</filter-name>
+		<url-pattern>/profile</url-pattern>
+		<url-pattern>/adminPanel.jsp</url-pattern>
+		<url-pattern>/AdminPanel</url-pattern>
+		<servlet-name>ProfileController</servlet-name>
+		<url-pattern>/AdminPanelController</url-pattern>
+		<url-pattern>/CreateThread.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>VerifyCsrfTokenFilter</filter-name>
+		<filter-class>controllers.VerifyCsrfTokenFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>VerifyCsrfTokenFilter</filter-name>
+		<url-pattern>/CreateThread.jsp</url-pattern>
+		<!-- <url-pattern>/profile.jsp</url-pattern> -->
+		<url-pattern>/ForumThread.jsp</url-pattern>
+		<!-- <url-pattern>/Forum.jsp</url-pattern> -->
+		<url-pattern>/eventEditing.jsp</url-pattern>
+		<url-pattern>/editNews.jsp</url-pattern>
+		<url-pattern>/createEvent.jsp</url-pattern>
+		<url-pattern>/addNews.jsp</url-pattern>
+		<!-- <url-pattern>/profile</url-pattern> -->
+		<url-pattern>/ForumController</url-pattern>
+		<url-pattern>/ThreadController</url-pattern>
+		<url-pattern>/EventController</url-pattern>
+		<url-pattern>/eventHandling</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>SameOrigenFilter</filter-name>
+		<filter-class>controllers.SameOrigenFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SameOrigenFilter</filter-name>
+		<url-pattern>/EventController</url-pattern>
+		<url-pattern>/ForumController</url-pattern>
+		<url-pattern>/LoginController</url-pattern>
+		<url-pattern>/LogoutController</url-pattern>
+		<url-pattern>/NewsController</url-pattern>
+		<url-pattern>/ProfileController</url-pattern>
+		<url-pattern>/RegistrationController</url-pattern>
+		<url-pattern>/ThreadController</url-pattern>
+	</filter-mapping>
+
+	<session-config>
+		<cookie-config>
+			<http-only>true</http-only>
+		</cookie-config>
+	</session-config>
+</web-app>

@@ -1,0 +1,2 @@
+admin1 has logged into the system
+admin1 got out of the system
